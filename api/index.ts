@@ -12,7 +12,7 @@ const app = express();
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
 
-app.get("/list-tables", (req, res) => {
+app.get("/list-tables", async (req, res) => {
     const response = await jamai.addRow({
         table_type: "action",
         data: [

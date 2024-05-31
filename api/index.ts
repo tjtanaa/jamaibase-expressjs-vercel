@@ -1,7 +1,7 @@
 const express = require("express");
-const jamaibase = require("jamaibase");
+import JamAI from "jamaibase";
 
-const jamai = new jamaibase.JamAI({
+const jamai = new JamAI({
     baseURL: process.env["BASEURL"]!,
     apiKey: process.env["JAMAI_APIKEY"]!,
     projectId: process.env["PROJECT_ID"]!
@@ -9,10 +9,10 @@ const jamai = new jamaibase.JamAI({
 
 const app = express();
 
-app.get("/", (req, res) => res.send("Express on Vercel"));
+app.get("/", (req: any, res: any) => res.send("Express on Vercel"));
 
 
-app.get("/list-tables", async (req, res) => {
+app.get("/list-tables", async (req: any, res: any) => {
     const response = await jamai.addRow({
         table_type: "action",
         data: [

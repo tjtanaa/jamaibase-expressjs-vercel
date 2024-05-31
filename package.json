@@ -14,5 +14,8 @@
     "express": "^4.19.2",
     "jamaibase": "^0.1.1",
     "node": "^20.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.13"
   }
 }

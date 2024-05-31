@@ -2,9 +2,9 @@ const express = require("express");
 const jamaibase = require("jamaibase");
 
 const jamai = new jamaibase.JamAI({
-    baseURL: "https://api.jamaibase.com",
-    apiKey: "jamai_sk_eeb00c6b81664d4fde5de89dca0d6fa312fdad4a294f1219",
-    projectId: "proj_2fc065ff9882f38201e6bde2"
+    baseURL: process.env["BASEURL"]!,
+    apiKey: process.env["JAMAI_APIKEY"]!,
+    projectId: process.env["PROJECT_ID"]!
 });
 
 const app = express();
